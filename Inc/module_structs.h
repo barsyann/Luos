@@ -142,6 +142,7 @@ typedef struct __attribute__((__packed__))
             uint16_t linear_position : 1;
             uint16_t linear_speed : 1;
             uint16_t current : 1;
+            uint16_t temperature : 1;
         };
         uint8_t unmap[2];
     };
@@ -188,6 +189,7 @@ typedef struct __attribute__((__packed__))
     linear_position_t linear_position;
     linear_speed_t linear_speed;
     current_t current;
+    temperature_t temperature;
 
     //configs
     float motor_reduction;
