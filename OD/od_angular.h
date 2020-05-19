@@ -59,6 +59,13 @@ static inline void angular_position_from_msg(angular_position_t *const self, con
     memcpy(self, msg->data, msg->header.size);
 }
 
+static inline void reachy_arm_pos_to_msg(const angular_position_t *const self, uint8_t nb_pos, msg_t *const msg)
+{
+    msg->header.cmd = REACHY_ARM_POS;
+    memcpy(msg->data, self, sizeof(angular_position_t) * nb_pos);
+    msg->header.size = sizeof(angular_position_t) * nb_pos;
+}
+
 typedef float angular_speed_t;
 
 // angular_speed are stored in degree/s (deg/s)

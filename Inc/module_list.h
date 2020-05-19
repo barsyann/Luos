@@ -24,6 +24,7 @@ typedef enum
     CONTROLLED_MOTOR_MOD,
     VOID_MOD,
     LOAD_MOD,
+    REACHY_ARM_MOD,
     LUOS_LAST_MOD
 } module_type_t;
 
@@ -88,6 +89,10 @@ typedef enum
     LINEAR_POSITION_LIMIT,  // min linear_position_t (m), max linear_position_t (m)
     RATIO_LIMIT,            // float(%)
     CURRENT_LIMIT,          // float(A)
+
+    // Reachy specific
+    REACHY_ARM_POS, // 8 * angular_position_t
+    REACHY_ARM_TEMP, // 8 * temperature_t
 
     // Specific register
     DXL_WHEELMODE,      // char (True/False) TODO => should be managed by MOTOR_REPORT the same way as controlled motor

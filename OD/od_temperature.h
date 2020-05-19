@@ -59,4 +59,11 @@ static inline void temperature_from_msg(temperature_t *const self, const msg_t *
     memcpy(self, msg->data, msg->header.size);
 }
 
+static inline void reachy_arm_temp_to_msg(const temperature_t *const self, uint8_t nb_temp, msg_t *const msg)
+{
+    msg->header.cmd = REACHY_ARM_TEMP;
+    memcpy(msg->data, self, sizeof(temperature_t) * nb_temp);
+    msg->header.size = sizeof(temperature_t) * nb_temp;
+}
+
 #endif /* OD_OD_TEMPERATURE_H_ */

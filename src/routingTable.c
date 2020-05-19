@@ -66,6 +66,9 @@ char *string_from_type(module_type_t type)
     case DYNAMIXEL_MOD:
         return "DynamixelMotor";
         break;
+    case REACHY_ARM_MOD:
+        return "ReachyArm";
+        break;
     case STEPPER_MOD:
         return "Stepper";
         break;
@@ -135,7 +138,7 @@ uint8_t is_sensor(module_type_t type)
 {
     if ((type == ANGLE_MOD) ||
         (type == STATE_MOD) ||
-        (type == DYNAMIXEL_MOD) ||
+        (type == REACHY_ARM_MOD) ||
         (type == DISTANCE_MOD) ||
         (type == IMU_MOD) ||
         (type == LOAD_MOD) ||
