@@ -69,6 +69,9 @@ char *string_from_type(module_type_t type)
     case REACHY_ARM_MOD:
         return "ReachyArm";
         break;
+    case REACHY_FAN_MOD:
+        return "ReachyFan";
+        break;
     case STEPPER_MOD:
         return "Stepper";
         break;

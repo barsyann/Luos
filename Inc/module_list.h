@@ -25,6 +25,7 @@ typedef enum
     VOID_MOD,
     LOAD_MOD,
     REACHY_ARM_MOD,
+    REACHY_FAN_MOD,
     LUOS_LAST_MOD
 } module_type_t;
 
